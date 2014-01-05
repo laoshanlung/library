@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="language" content="en_US" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+
+  <link rel="stylesheet" href="//code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css" />
+
+  <script type="text/javascript" src="/js/vendors/require.js"></script>
+  <script type="text/javascript">
+    $(function(){
+      var configs = {
+        "paths": {
+          "underscore": "libs/underscore",
+          "backbone": "libs/backbone",
+          "abstractview": "views/abstract",
+          "abstractmodel": "models/abstract",
+          "abstractcollection": "collections/abstract",
+          "text": "vendors/require-text",
+          "backbone.babysitter": "vendors/backbone.babysitter",
+          "backbone.wreqr": "vendors/backbone.wreqr",
+          "marionette": "vendors/backbone.marionette",
+          "mobileview": "libs/mobileview"
+        },
+        "shim": {
+          "vendors/underscore": {
+            "exports": "_"
+          },
+          "vendors/backbone": {
+            "deps": ["vendors/underscore"],
+            "exports": "Backbone"
+          },
+          "libs/backbone.maze": {
+            "deps": ["vendors/backbone"],
+            "exports": "Maze"
+          }
+        }
+      };
+      
+      configs['deps'] = ['modules/library'];
+      configs['baseUrl'] = "js";
+      require.config(configs);
+    });
+  </script>
+
+  <title>Library</title>
+</head>
+
+<body>
+
+</body>
+</html>
