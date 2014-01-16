@@ -1,15 +1,15 @@
 define([
   'backbone'
-  , 'views/login'
-], function(Backbone, LoginView){
+  , 'views/main'
+], function(Backbone, MainView){
   var Router = Backbone.Router.extend({
     routes: {
       "": "index"
     },
 
     index: function() {
-      $('body').append(new LoginView().render().$el);
-      $.mobile.changePage( "#login" , { reverse: false, changeHash: false } );
+      $('body').append(new MainView().render().$el);
+      $.mobile.changePage( "#main" , { reverse: false, changeHash: false } );
     }
   });
 

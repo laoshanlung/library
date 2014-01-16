@@ -4,7 +4,23 @@ define([
   return Marionette.ItemView.extend({
     constructor: function(){
       Marionette.ItemView.prototype.constructor.apply(this, Array.prototype.slice.apply(arguments));
+      var self = this;
+
       this.listenTo(this, 'render', this.prepareDataPage);
+
+      this.$el.on('click', '[data-rel="popup"]', function(e){
+        var href = $(e.currentTarget).attr('href');
+
+        self.openPopup(href);
+        return false;
+      })
+    },
+
+    openPopup: function(id) {
+      if (id.charAt(0) != '#') {
+        id = '#' + id;
+      }
+      $(id).popup('open');
     },
 
     prepareDataPage: function() {
