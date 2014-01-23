@@ -1,0 +1,9 @@
+{
+  "name": "library",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "grunt-contrib-connect": "~0.6.0",
+    "grunt": "~0.4.2"
+  }
+}
