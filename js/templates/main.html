@@ -7,16 +7,22 @@
 </div>
 
 <div role="main" class="ui-content">
+  <div class="ui-corner-all custom-corners js-search-form">
+
+  </div>
+  <p></p>
+
+  <div class="ui-corner-all custom-corners js-search-result">
+
+  </div>
+  <p></p>
+
   <div class="ui-corner-all custom-corners">
     <div class="ui-bar ui-bar-a">
-      <h3>Search</h3>
+      <h3>Login</h3>
     </div>
-    <div class="ui-body ui-body-a">
-      <form>
-        <label for="search" class="ui-hidden-accessible">Search:</label>  
-        <input type="search" name="query" id="search" value="" data-mini="true">
-        <button class="ui-shadow ui-btn ui-corner-all" type="submit" id="submit-2">Submit</button>
-      </form>
+    <div class="ui-body ui-body-a js-login-form">
+      
     </div>
   </div>
   <p></p>
@@ -44,26 +50,37 @@
     </div>
   </div>
 
-  <a href="#popupFaq" data-rel="popup" data-position-to="window" data-transition="pop" class="ui-btn ui-corner-all">FAQ</a>
-  <a href="#popupNelli" data-rel="popup" data-position-to="window" data-transition="pop" class="ui-btn ui-corner-all">Nelli</a>
+  <div class="ui-grid-a">
+      <div class="ui-block-a">
+        <div class="ui-bar ui-bar-a">
+          <ul data-role="listview" data-theme='b'>
+            <li data-icon="false"><a href="#">loperium</a></li>
+            <li data-icon="false"><a href="#">loperium</a></li>
+            <li data-icon="false"><a href="#">loperium</a></li>
+            <li data-icon="false"><a href="#">loperium</a></li>
+            <li data-icon="false"><a href="#">loperium</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="ui-block-b">
+        <div class="ui-bar ui-bar-a">
+          <ul data-role="listview" data-theme='b'>
+            <li data-icon="false"><a href="#">loperium</a></li>
+            <li data-icon="false"><a href="#">loperium</a></li>
+            <li data-icon="false"><a href="#">loperium</a></li>
+            <li data-icon="false"><a href="#">loperium</a></li>
+            <li data-icon="false"><a href="#">loperium</a></li>
+          </ul>
+        </div>
+      </div>
+  </div>
 </div><!-- /content -->
 
 <div data-overlay-theme="b" data-role="popup" id="popupLogin" data-theme="a" class="ui-corner-all">
-  <form>
-    <div style="padding:10px 20px;">
-      <h3>Login</h3>
-      <label for="library-card-number" class="ui-hidden-accessible">Library card number:</label>
-      <input type="text" name="libraryCardNumber" id="library-card-number" value="" placeholder="Library card number" data-theme="a">
-
-      <label for="last-name" class="ui-hidden-accessible">Last Name:</label>
-      <input type="text" name="lastName" id="last-name" value="" placeholder="Last Name" data-theme="a">
-
-      <label for="pin" class="ui-hidden-accessible">Pin:</label>
-      <input type="text" name="pin" id="pin" value="" placeholder="Pin (Default 12345) " data-theme="a">
-
-      <button type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check">Login</button>
-    </div>
-  </form>
+  <h3>Login</h3>
+  <div style="padding:10px 20px;" class="js-login-form">
+    
+  </div>
 </div>
 
 <div data-role="popup" id="popupLanguage" data-theme="a" data-overlay-theme="b">
@@ -72,16 +89,4 @@
       <li><a href="#">På svenska</a></li>
       <li><a href="#">English</a></li>
   </ul>
-</div>
-
-<div data-role="popup" id="popupFaq" data-theme="a" data-overlay-theme="b">
-  <div style="padding:10px 20px;">
-    This is the content of FAQ popup
-  </div>
-</div>
-
-<div data-role="popup" id="popupNelli" data-theme="a" data-overlay-theme="b">
-  <div style="padding:10px 20px;">
-    This is the content of Nelli popup
-  </div>
 </div>

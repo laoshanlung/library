@@ -1,0 +1,52 @@
+<div class="ui-bar ui-bar-a">
+  <h3>Search</h3>
+</div>
+<div class="ui-body ui-body-a">
+  <form>
+    <label for="search" class="ui-hidden-accessible">Search:</label>  
+    <input type="search" name="query" id="search" value="" data-mini="true">
+
+    <div data-role="collapsible" data-mini="true">
+        <h4>Search options</h4>
+        <label for="search-field" class="ui-hidden-accessible">Within:</label>
+        <select name="field" id="search-field" data-mini="true">
+          <option selected value="GKEY^*">all fields</option>
+          <option value="TALL">title</option>
+          <option value="TKEY^">words in title</option>
+          <option value="NKEY^">author</option>
+          <option value="NAME+">author (browse)</option>
+          <option value="020B">ISBN</option>
+          <option value="JALL">journal title</option>
+          <option value="JKEY^">words in journal title</option>
+          <option value="SKEY^">subject</option>
+          <option value="SUBJ+">subject (browse)</option>
+          <option value="CALL">call number</option>
+          <option value="CMD*">command search with relevance</option>
+        </select>
+
+        <label for="search-limit-to" class="ui-hidden-accessible">Limit To:</label>
+        <select name="limitTo" id="search-limit-to" data-mini="true">
+          <option selected value="none">All Material</option>
+          <option value="Date=2006-">2006 And After</option>
+          <option value="LANG=ENG">English language materials</option>
+          <option value="LANG=SWE">Swedish language materials</option>
+          <option value="LANG=FIN">Finnish language materials</option>
+        </select>
+
+        <label for="search-limit" class="ui-hidden-accessible">Records per page:</label>
+        <select name="limit" id="search-limit" data-mini="true">
+          <option selected value="10">10 records per page</option>
+          <option value="25">25 records per page</option>
+          <option value="50">50 records per page</option>
+        </select>
+    </div>
+      <div class="ui-grid-a">
+          <div class="ui-block-a">
+            <a href="#" class="ui-shadow ui-btn ui-corner-all js-search">Seach</a>
+          </div>
+          <div class="ui-block-b">
+            <a href="#" class="ui-shadow ui-btn ui-corner-all">Reset</a>
+          </div>
+      </div>
+  </form>
+</div>
