@@ -10,7 +10,7 @@ define([
       {
         "name": "Diary of a Wimpy Kid: Hard Luck (Book 8)",
         "location": "",
-        "available": true
+        "available": false
       },
       {
         "name": "Demon Dentist",
@@ -20,7 +20,7 @@ define([
       {
         "name": "Minecraft: The Official Redstone Handbook",
         "location": "",
-        "available": true
+        "available": false
       },
       {
         "name": "Mockingjay (Hunger Games Trilogy)",
@@ -30,7 +30,7 @@ define([
       {
         "name": "Minecraft: The Official Beginner's Handbook",
         "location": "",
-        "available": true
+        "available": false
       },
       {
         "name": "The Hunger Games (Hunger Games Trilogy)",
@@ -50,7 +50,7 @@ define([
       {
         "name": "An Inspector Calls (Heinemann Plays For 14-16+)",
         "location": "",
-        "available": true
+        "available": false
       },
       {
         "name": "Gangsta Granny",
@@ -65,7 +65,7 @@ define([
       {
         "name": "Ratburger",
         "location": "",
-        "available": true
+        "available": false
       },
       {
         "name": "Divergent (Divergent, Book 1)",
@@ -80,12 +80,12 @@ define([
       {
         "name": "Diary of a Wimpy Kid: The Third Wheel",
         "location": "",
-        "available": true
+        "available": false
       },
       {
         "name": "The House of Hades (Heroes of Olympus Book 4)",
         "location": "",
-        "available": true
+        "available": false
       },
       {
         "name": "The Boy in the Dress",
@@ -95,7 +95,7 @@ define([
       {
         "name": "Room on the Broom",
         "location": "",
-        "available": true
+        "available": false
       },
       {
         "name": "Gruffalo's Child Sound Book",

@@ -4,12 +4,17 @@ define([
 ], function(Backbone, MainView){
   var Router = Backbone.Router.extend({
     routes: {
-      "": "index"
+      "": "index",
+      "(:test)": 'test'
     },
 
     index: function() {
       $('body').append(new MainView().render().$el);
       $.mobile.changePage( "#main" , { reverse: false, changeHash: false } );
+    },
+
+    test: function(test) {
+      console.log(test);
     }
   });
 

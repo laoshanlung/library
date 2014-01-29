@@ -7,8 +7,13 @@ define([
     model: Model,
 
     random: function(limit) {
-      limit = limit || 10;
+      limit = limit || 5;
       this.reset(_.shuffle(_.clone(samplebooks)).slice(0,limit));
+    },
+
+    hasBook: function(name) {
+      var check = this.where({name: name});
+      return check.length !== 0;
     }
   });
 })

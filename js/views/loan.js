@@ -3,39 +3,16 @@ define([
   , 'backbone'
   , 'marionette'
   , 'mobileview'
-  , 'text!templates/search_result.html'
-  , 'text!templates/search_result_item.html'
+  , 'text!templates/loan.html'
+  , 'text!templates/loan_item.html'
 ], function(_, Backbone, Marionette, MobileView, template, item){
-  var SearchItemView = Marionette.ItemView.extend({
-    events: {
-      'change .js-select-book': 'onChange'
-    },
-
+  var ItemView = Marionette.ItemView.extend({
     template: function(data){
       return _.template(item, data);
     },
 
     onRender: function() {
-      var self = this;
-      this.$('.js-select-book').on('checkboxradiocreate', function(){
-        var selected = self.model.collection.selected.hasBook(self.model.get('name'));
-        if (selected) {
-          self.$('.js-select-book').prop( "checked", true ).checkboxradio( "refresh" );
-        }
-      });
-    },
 
-    onChange: function(e) {
-      var $target = $(e.currentTarget);
-      if ($target.is(':checked')) {
-        var selectedBooks = this.model.collection.selected;
-        if (!selectedBooks.hasBook(this.model.get('name'))) {
-          selectedBooks.add(this.model);  
-        }
-        
-      } else {
-        this.model.collection.selected.remove(this.model);
-      }
     },
 
     serializeData: function() {
@@ -61,9 +38,9 @@ define([
 
     onRender: function() {
       var collectionView = new Marionette.CollectionView({
-        itemView: SearchItemView,
+        itemView: ItemView,
         collection: this.collection,
-        el: this.$('.js-result-list')
+        el: this.$('.js-list')
       });
 
       collectionView.render();

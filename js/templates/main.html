@@ -1,12 +1,16 @@
 <div data-role="header">
-  <a href="#popupLogin" data-rel="popup" data-position-to="window" data-transition="pop" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all">Login</a>
+  <a href="#popupLogin" data-rel="popup" data-position-to="window" data-transition="pop" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all js-logout-button">Logout</a>
 
   <h1>Alma</h1>
-
-  <a href="#popupLanguage" data-rel="popup" data-position-to="window" data-transition="pop" class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all">Language</a>
+  <a href="#popupLanguage" data-rel="popup" data-position-to="window" data-transition="pop" class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all">
+    <img src="/images/usa.gif" alt="US" height="16px">
+  </a>
 </div>
 
 <div role="main" class="ui-content">
+  <div class="js-welcome">
+
+  </div>
   <div class="ui-corner-all custom-corners js-search-form">
 
   </div>
@@ -17,7 +21,12 @@
   </div>
   <p></p>
 
-  <div class="ui-corner-all custom-corners">
+  <div class="ui-corner-all custom-corners js-my-account">
+
+  </div>
+  <p></p>
+
+  <div class="ui-corner-all custom-corners js-login-container">
     <div class="ui-bar ui-bar-a">
       <h3>Login</h3>
     </div>
@@ -85,8 +94,7 @@
 
 <div data-role="popup" id="popupLanguage" data-theme="a" data-overlay-theme="b">
   <ul data-role="listview" data-inset="true" style="min-width:210px;">
-      <li><a href="#">Suomeksi</a></li>
-      <li><a href="#">På svenska</a></li>
-      <li><a href="#">English</a></li>
+      <li><a href="#"><img src="/images/fi.png" alt="Finland" class="ui-li-icon ui-corner-none">Suomeksi</a></li>
+      <li><a href="#"><img src="/images/se.png" alt="Sweden" class="ui-li-icon ui-corner-none">På svenska</a></li>
   </ul>
 </div>
