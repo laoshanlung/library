@@ -5,8 +5,9 @@ define([
   , 'mobileview'
   , 'views/loan'
   , 'views/reservation'
+  , 'views/mylist'
   , 'text!templates/my_account.html'
-], function(_, Backbone, Marionette, MobileView, LoanView, ReservationView, template){
+], function(_, Backbone, Marionette, MobileView, LoanView, ReservationView, MylistView, template){
   var View = Marionette.ItemView.extend({
     events: {
 
@@ -14,7 +15,8 @@ define([
 
     ui: {
       loan: '.js-loans',
-      reservation: '.js-reservation'
+      reservation: '.js-reservation',
+      mylist: '.js-mylist'
     },
 
     initialize: function() {
@@ -37,11 +39,19 @@ define([
         collection: this.model.get('reservation')
       });
 
+      this.mylist = new MylistView({
+        el: this.ui.mylist,
+        collection: this.model.get('mylist')
+      });
+
       this.loan.render();
       this.reservation.render();
+      this.mylist.render();
 
       this.loan.initCheckboxes();
       this.reservation.initCheckboxes();
+      this.mylist.initCheckboxes();
+
       this.$el.hide();
     },
 
@@ -49,6 +59,7 @@ define([
       this.$el.show();
       this.loan.initCheckboxes();
       this.reservation.initCheckboxes();
+      this.mylist.initCheckboxes();
     },
 
     onLoggedOut: function() {

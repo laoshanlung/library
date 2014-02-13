@@ -41,6 +41,7 @@ define([
 
       this.user.set('loans', new Books());
       this.user.set('reservation', new Books());
+      this.user.set('mylist', new Books());
 
       this.listenTo(this.user, 'loggedIn', this.onLoggedIn);
       this.listenTo(this.user, 'loggedOut', this.onLoggedOut);
@@ -74,22 +75,29 @@ define([
     },
 
     onSubmitLogin: function(e) {
+      var self = this;
       var params = this.formParams($(e.currentTarget));
       this.showLoader();
-      if (params.pin != 'library') {
-        this.showPopup('Invalid username and/or password');
-      } else {
-        this.user.set({
+      // if (params.pin != 'library') {
+      //   this.showPopup('Invalid username and/or password');
+      // } else {
+
+      // }
+
+      setTimeout(function(){
+        self.user.set({
           loggedIn: true,
           name: params.lastName,
           cardNumber: params.libraryCardNumber
         });
-        this.user.get('loans').random();
-        this.user.get('reservation').random();
-        this.user.trigger('loggedIn');
-      }
+        self.user.get('loans').random();
+        self.user.get('reservation').random();
+        self.user.get('mylist').random();
+        self.user.trigger('loggedIn');
+        self.hideLoader();
+      }, 500);
 
-      this.hideLoader();
+      
       return false;
     },
 

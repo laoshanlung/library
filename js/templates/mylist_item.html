@@ -2,10 +2,10 @@
 <label for="checkbox-mini-<%= model.cid %>">
   <ul style="list-style: none; margin: 0px; padding: 0px;">
     <li>
-      <%= model.get('name') %>
+      <%= model.get('name') %><img src="<%= model.get('available') ? "/images/icon_available.gif" : "/images/icon_notavailable.gif" %>" />
     </li>
     <li>
-      Available <%= model.randomFutureDate() %>
+      Location
     </li>
   </ul>
 </label>
