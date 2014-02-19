@@ -16,7 +16,8 @@ define([
 
     events: {
       'click .js-search': 'onClickSearch',
-      'submit .js-login-form form': 'onSubmitLogin'
+      'submit .js-login-form form': 'onSubmitLogin',
+      'click .js-logout-button': 'onClickLogout'
     },
 
     ui: {
@@ -98,6 +99,11 @@ define([
       }, 500);
 
       
+      return false;
+    },
+
+    onClickLogout: function() {
+      window.location.reload();
       return false;
     },
 

@@ -1,10 +1,17 @@
 <div data-role="header">
-  <a href="#popupLogin" data-rel="popup" data-position-to="window" data-transition="pop" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all js-logout-button">Logout</a>
+  <div class="ui-btn-left">
+    <a href="#" class="ui-btn ui-btn-inline ui-mini ui-corner-all js-logout-button ui-icon-power ui-btn-icon-left">Logout</a>
+    <span class="logo ui-btn ui-btn-inline ui-mini ui-corner-all"><img src="/images/logo.jpg"></span>
+  </div>
+  
 
   <h1>Alma</h1>
-  <a href="#popupLanguage" data-rel="popup" data-position-to="window" data-transition="pop" class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all">
+  
+  <div class="ui-btn-right" style="height: 55px;">
+    <a href="#popupLanguage" data-rel="popup" data-position-to="window" data-transition="pop" class="ui-btn ui-btn-inline ui-mini ui-corner-all" style="position: relative; top: 50%; margin-top: -18px;">
     <img src="/images/uk.gif" alt="US" height="16px">
   </a>
+  </div>
 </div>
 
 <div role="main" class="ui-content">
@@ -90,7 +97,7 @@
   <div class="ui-grid-a">
       <div class="ui-block-a">
         <div class="ui-bar ui-bar-a">
-          <ul data-role="listview" data-theme='b'>
+          <ul data-role="listview" data-theme='a'>
             <li data-icon="false"><a href="http://www.nelliportaali.fi/V/?institute=AA&portal=AA&new_lng=eng" target="_blank">Nelli portal</a></li>
             <li data-icon="false"><a href="http://www.abo.fi/public/sv" target="_blank">News</a></li>
             <li data-icon="false"><a href="http://www.abo.fi/bibliotek/annan_service" target="_blank">Book a librarian</a></li>
@@ -101,7 +108,7 @@
       </div>
       <div class="ui-block-b">
         <div class="ui-bar ui-bar-a">
-          <ul data-role="listview" data-theme='b'>
+          <ul data-role="listview" data-theme='a'>
             <li data-icon="false"><a href="http://melinda.kansalliskirjasto.fi/F/?func=find-b-0&CON_LNG=eng&local_base=fin01_opac" target="_blank">Melinda</a></li>
             <li data-icon="false"><a href="http://www.abo.fi/bibliotek/en/News/Item/item/8025" target="_blank">Press display</a></li>
             <li data-icon="false"><a href="http://elib.se/library/default.asp?lib=971" target="_blank">E-lib.se</a></li>
