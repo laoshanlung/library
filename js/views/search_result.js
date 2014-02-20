@@ -73,6 +73,10 @@ define([
       this.$('input').each(function(){
         $(this).checkboxradio();
       });
+
+      this.$('[data-role=popup]').each(function(){
+        $(this).popup();
+      });
     },
 
     onClickNext: function() {
